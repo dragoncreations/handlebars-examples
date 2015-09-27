@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Handlebars - Ścieżki</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <script id="tpl" type="text/x-handlebars-template">
+            {{#with tresc}}
+                <h2>{{tytul}}</h2>
+                <p>Opublikowany: {{data}}</p>
+                <p>Komentarzy: {{komentarzy}}</p>
+                <p class="trescPostu">{{{wpis}}}, napisane przez: {{../autor}}.</p>
+            {{/with}}
+        </script>
+        <div id="post">
+            
+        </div>
+        <script src="js/handlebars-v4.0.2.js"></script>
+        <script src="js/paths.js"></script>
+    </body>
+</html>

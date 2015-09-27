@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Handlebars - Partials</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <script id="tpl" type="text/x-handlebars-template">
+            <p>{{informacje}}</p>
+            <p>Adres firmy: {{adres}}</p>
+            <p>Infolinia: {{telefon}}</p>
+            {{> listaPracownikow}}
+        </script>
+        <script id="tpl2" type="text/x-handlebars-template">
+            <ul>
+                {{#each pracownicy}}
+                    <li>{{imie}} {{nazwisko}}</li>
+                {{/each}}
+            </ul>
+        </script>
+        <div id="output">
+            
+        </div>
+        <script src="js/handlebars-v4.0.2.js"></script>
+        <script src="js/partial.js"></script>
+    </body>
+</html>

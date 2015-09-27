@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Handlebars - Instrukcje blokowe</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <script id="tpl" type="text/x-handlebars-template">
+            {{#lista osoby class="mojaKlasa"}}
+                {{imie}} {{nazwisko}}
+            {{/lista}}
+        </script>
+        <div id="output">
+            
+        </div>
+        <script src="js/handlebars-v4.0.2.js"></script>
+        <script src="js/blocks.js"></script>
+    </body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Handlebars - Pracownicy</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <script id="tpl" type="text/x-handlebars-template">
+            {{#each pracownicy}}
+                <h2>Imię i nazwisko: {{imie}} {{nazwisko}}</h2>
+                {{#unless telefon.zastrzezony}}
+                    <p>Numer telefonu: {{telefon.numer}}</p>
+                {{/unless}}
+                <p>Wiek: {{wiek}}</p>
+                <p>
+                {{#if urlop}}
+                    Ilość dni urlopu do wykorzystania: {{urlop}}
+                {{else}}
+                    Urlop został wykorzystany
+                {{/if}}
+                </p>
+                <hr>
+            {{/each}}
+        </script>
+        <div id="output">
+            
+        </div>
+        <script src="js/handlebars-v4.0.2.js"></script>
+        <script src="js/employee.js"></script>
+    </body>
+</html>
